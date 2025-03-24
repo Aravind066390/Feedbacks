@@ -1,30 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Feedback Form</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="container">
-        <form id="feedbackForm">
-            <h2>We value your feedback</h2>
-            <div class="input-group">
-                <input type="text" name="company_name" placeholder="Company Name" required>
-            </div>
-            <div class="input-group">
-                <label for="satisfaction">Satisfaction Level</label>
-                <input type="range" name="satisfaction" min="1" max="5" value="3" id="satisfactionRange">
-                <span id="rangeValue">3</span>
-            </div>
-            <div class="input-group">
-                <textarea name="feedback" placeholder="Share your thoughts..." rows="4" required></textarea>
-            </div>
-            <button type="submit">Send Feedback</button>
-        </form>
-    </div>
-</body>
-</html>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.2);
+    border: 3px solid rgba(0, 0, 255, 0.3);
+    width: 90%;
+    max-width: 400px;
+    transition: 0.4s;
+}
+
+.container:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 255, 0.4);
+    border-color: rgba(0, 0, 255, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #444;
+}
+
+#satisfactionRange {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#rangeValue {
+    display: block;
+    margin-top: 6px;
+    text-align: right;
+    color: #555;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #667eea;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4a5ed9;
+}
