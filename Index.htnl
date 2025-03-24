@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="feedbackForm">
+            <h2>We value your feedback</h2>
+            <div class="input-group">
+                <input type="text" name="company_name" placeholder="Company Name" required>
+            </div>
+            <div class="input-group">
+                <label for="satisfaction">Satisfaction Level</label>
+                <input type="range" name="satisfaction" min="1" max="5" value="3" id="satisfactionRange">
+                <span id="rangeValue">3</span>
+            </div>
+            <div class="input-group">
+                <textarea name="feedback" placeholder="Share your thoughts..." rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
