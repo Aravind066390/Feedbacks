@@ -11,7 +11,7 @@ range.addEventListener('input', () => {
 
 document.getElementById('feedbackForm').addEventListener('submit', function(e){
     e.preventDefault();
-    emailjs.sendForm('YOUR_SERVICE_ID_HERE', 'YOUR_TEMPLATE_ID_HERE', this)
+    emailjs.sendForm('service_2zqbwko', 'template_zlsg7xj', this)
         .then(function() {
             alert('Thank you! Your feedback has been sent.');
             document.getElementById('feedbackForm').reset();
